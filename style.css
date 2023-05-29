@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+textarea {
+    font-family: monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    color: white;
+    font-size: 22px;
+    border-top: none;
+    background-color: transparent;
+
+}
+textarea::placeholder{
+    color: white;
+    font-size: 22px;
+}
+
+path{
+    pointer-events: none;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: #BABABA;
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-top: 25px;
+}
+
+.flexContainer {
+    flex-basis: 25%;
+    /* note here------------------------------- */
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #525252;
+}
+
+#output {
+    width: 100%;
+    height: 100%;
+}
+
+/* bar */
+.bar {
+    width: 100%;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+/* bar */
+.blockIcon {
+    width: 22px;
+}
+
+.barLeft {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.tabText {
+    font-family: 'poppins';
+    font-weight: 600;
+    color: #525252;
+}
+
+.barRight {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.barIcon {
+    fill: rgba(0, 0, 0, 0.5);
+}
+.barIcon:hover {
+    fill: rgba(0, 0, 0, 0.8);
+}
+
+.outputBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.outputBlock .bar{
+    background-color: #E6E6E6;
+}
+
+#output{
+    outline: none;
+    border: 1px solid white;
+    border-top: none;
+}
+
+.contentBlock{
+    width: 100%;
+    height: 90%;
+    flex-grow: 1;
+    padding-right: 12px;
+    border: none;
+    padding: 10px;
+}
+.content::-webkit-scrollbar {
+    width: 2.5px;
+}
+.content::-webkit-scrollbar:hover {
+    width: 10px;
+}
+   
+.content::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 1);
+    border: 0.1px solid rgba(255, 255, 255,0.11);
+    outline: none;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.outputBlock{
+    background-color: white;
+}
+.outputBlock .contentBlock{
+    padding: 0;
+}
+
+.exitFullScreen{
+    display: none;
+}
+
+@media (orientation:portrait){
+    .flexContainer {
+        flex-basis: 20%;
+    }
+}
